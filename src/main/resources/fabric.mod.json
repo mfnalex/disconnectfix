@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "disconnectfix",
+  "version": "${version}",
+  "name": "DisconnectFix",
+  "description": "Fixes certain random disconnects",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.jeff_media.disconnectfix.client.DisconnectfixClient"
+    ],
+    "main": [
+      "com.jeff_media.disconnectfix.Disconnectfix"
+    ]
+  },
+  "mixins": [
+    "disconnectfix.mixins.json",
+    {
+      "config": "disconnectfix.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}
